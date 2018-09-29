@@ -1,0 +1,23 @@
+{
+    "name": "conference-bot",
+    "authors": "Hugo H",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {
+        "dotenv": "^6.0.0",
+        "moment": "^2.22.2",
+        "node-telegram-bot-api": "^0.30.0",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.2"
+    },
+    "devDependencies": {
+        "@types/moment": "~2.13.0",
+        "@types/node-telegram-bot-api": "~0.30.3",
+        "@types/request": "~2.47.1",
+        "@types/request-promise": "~4.1.42"
+    },
+    "scripts": {
+        "start": "node ./dist/index.js",
+        "build": "tsc"
+    }
+}
