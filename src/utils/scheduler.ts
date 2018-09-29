@@ -10,7 +10,7 @@ setInterval(() => {
   tasks.forEach(task => {
     if (task.timestamp.getTime() <= Date.now()) {
       task.fn()
-      tasks = tasks.filter(t => t.timestamp.getTime() >= Date.now());
+      tasks = tasks.filter(t => t.timestamp.getTime() >= Date.now())
     }
   })
 }, 1000)
