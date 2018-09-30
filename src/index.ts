@@ -1,8 +1,9 @@
 require('dotenv').config()
 import {getAllEvents, Event} from './clients/tekisCalendarApiClient'
 import * as moment from 'moment'
-import {scheduleTask} from './utils/scheduler'
+import {scheduleTask, getTasks} from './utils/scheduler'
 import * as Client from 'node-telegram-bot-api'
+import {inspect} from 'util';
 
 const client = new Client(process.env.TELEGRAM_BOT_TOKEN, { polling: true })
 
@@ -17,6 +18,7 @@ function pollNewEvents() {
       .forEach(event => {
         scheduleTask(event.id, event.starts, sendMessage)
       })
+      console.log(inspect(getTasks()))
   })
 }
 

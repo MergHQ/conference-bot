@@ -25,3 +25,7 @@ export function scheduleTask(id: number, time: Date, callback: () => void) {
     fn: callback
   })
 }
+
+export function getTasks(): Task[] {
+  return tasks
+}
