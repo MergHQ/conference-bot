@@ -22,7 +22,7 @@ function pollNewEvents() {
   })
 }
 
-setTimeout(pollNewEvents, 60 * 60 * 1000)
+setInterval(pollNewEvents, 60 * 60 * 1000)
 pollNewEvents()
 
 function filterEvents(event: Event) {
